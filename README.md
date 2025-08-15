@@ -37,6 +37,33 @@ java Main
 
 4. Keep networking disabled or use “Host-only” mode
 
+🖥 How to Use
+1. Install Java JDK
+    ->Download & install from:
+        Oracle JDK
+        or Adoptium
+    ->Verify installation:
+        java -version
+        javac -version
+
+2. Install a Virtual Machine (Required for Safety)
+    -> VirtualBox 
+    -> VMware Workstation Player
+    -> Create a new VM, install any OS (Ubuntu/Windows), and keep networking disabled.
+
+3. Get the Project
+    Inside your VM:
+        git clone https://github.com/username/repo.git
+        cd repo/src
+
+4. Compile and Run
+    javac *.java
+    java Main
+
+5. Test Safely
+    -> Only use test files.
+    -> Never run this program on your main system or with important data.
+
 
 📚 What I Learned :-
 -> Basics of Java syntax and structure
