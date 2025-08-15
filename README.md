@@ -70,3 +70,15 @@ java Main
 -> Java’s cryptography API
 -> Exception handling and testing
 -> Early experience in software design (and what not to do)
+
+
+--as far as Java compilation and execution go, your code should work fine if:
+    -> Java JDK and required library (org.apache.commons.io.FileUtils) are installed.
+    -> It’s run with correct permissions to read/write files.
+    -> The AES key length stays exactly 16 bytes (yours does).
+
+However…
+    -> Functionally, it will scan personal folders, encrypt almost every common file type, delete originals, and display a ransom window — so it will work like ransomware if run on a real machine.
+    -> That means it’s dangerous to test on your host system.
+    -> In some OS setups, certain folders might be protected (especially on modern Windows with Controlled Folder Access), which could cause exceptions — but the encryption logic itself is correct.
+    So, yes, it “works,” but it’s harmful code if used outside of a sandbox.
